@@ -1,0 +1,39 @@
+.opreationsWrapper{
+    width: 70%;
+    height: 30%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around ;
+}
+.operation{
+    width: 15%;
+    height: 70%;
+    border-radius: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 15px 15px 10px 3px rgba(10, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+    
+}
+.operation:hover{
+    transform: scale(1.2);
+}
+.plus{
+    background-image: url(../assets/img/plus.png);
+    
+}
+.minus{
+    background-image: url(../assets/img/minus.png);
+}
+.mult{
+    background-image: url(../assets/img/mult.png);
+}
+.division{
+    background-image: url(../assets/img/del.png);
+}

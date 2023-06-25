@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.App{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(41,147,187);
+    background: linear-gradient(355deg, rgba(41,147,187,1) 0%, rgba(55,55,171,1) 28%);
+    
+}
+@keyframes bgAnimation {
+    0%{
+        background-position:0 50% ;
+    }
+    25%{
+        background-position:50% 75% ;
+    }
+    50%{
+        background-position:75 50% ;
+    }
+    75%{
+        background-position:100 50% ;
+    }
+    100%{
+        background-position:0 50% ;
+    }
+
+}
