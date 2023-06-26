@@ -1,11 +1,9 @@
-import { CheckBox } from "./components/CheckBox";
-import { Name } from "./components/Name";
+import { CheckBox } from "./components/GoButton";
 import { Operations } from "./components/Operations";
 import "./styles/app.css"
 function App() {
   return (
     <div className="App">
-      <Name/>
       <Operations/>
       <CheckBox/>
     </div>
