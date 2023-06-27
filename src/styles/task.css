@@ -1,0 +1,38 @@
+.taskWrapper{
+    
+   display:flex;
+   width:70%;
+   height: 100%;
+   margin: auto;
+   justify-content: space-around;
+   align-items: center;
+   
+}
+.partOfTask{
+    height: 100%;
+   
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 200px;
+    color: white;
+    font-family: cursive;
+}
+.signOperation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 200px;
+    color: white;
+    font-family: cursive;
+    padding-bottom: 50px;
+}

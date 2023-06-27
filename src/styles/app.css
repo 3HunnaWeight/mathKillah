@@ -8,5 +8,5 @@
     height: 100vh;
     background: rgb(41,147,187);
     background: linear-gradient(355deg, rgba(41,147,187,1) 0%, rgba(55,55,171,1) 28%);
-    
+    display: flex;
 }
