@@ -3,7 +3,6 @@ const defaultState = {
     minus:false,
     mult:false,
     division:false,
-    audio:require("../audio/start.mp3")
 }
 
 const PLUS_CHOOSE = 'PLUS_CHOOSE'
@@ -21,8 +20,6 @@ export const chooseReducer = (state=defaultState,action) =>{
             return {...state, mult:!state.mult}
         case DIVISION_CHOOSE:
             return {...state, division:!state.division}
-        case PLAY:
-            return {...state, audio:this.audio.play()}    
         default:
             return state
     }

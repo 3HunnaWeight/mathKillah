@@ -10,12 +10,11 @@
 }
 .partOfTask{
     height: 100%;
-   
-    width: 15%;
     justify-content: center;
     align-items: center;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 .sign{
     display: flex;
@@ -35,4 +34,28 @@
     color: white;
     font-family: cursive;
     padding-bottom: 50px;
+}
+.signEqual{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 200px;
+    color: white;
+    font-family: cursive;
+    padding-bottom: 50px;
+}
+.inputValue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    font-size: 150px;
+    width: 350px;
+    color: white;
+    font-family: cursive;
+    border: none;
+    border-bottom:2px solid white;
+    outline: none;
+    line-height: none;
 }
