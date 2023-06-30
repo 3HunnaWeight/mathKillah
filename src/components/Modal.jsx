@@ -39,7 +39,7 @@ export const Modal = () => {
                 <div className='btn'  onClick={()=>{tryAgain();play();}}>
                     Try again   
                 </div>
-                <Link to ='/' className='btn' onClick={()=>{reset();play()}} >
+                <Link to ='/mathKillah' className='btn' onClick={()=>{reset();play()}} >
                         Choose other signs 
                 </Link>
             </div>
