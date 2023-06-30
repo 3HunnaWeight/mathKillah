@@ -10,7 +10,7 @@ export const Timer = () => {
   const [time, setTime] = useState(60);
   const intervalRef = useRef(null);
   const sec = () => {
-    setTime((prevTime) => (prevTime > 0 ? prevTime - 20 : prevTime));
+    setTime((prevTime) => (prevTime > 0 ? prevTime - 1 : prevTime));
   };
   useEffect(()=>{
     if(reset===true||ansver===null){
