@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/mathKillah/static/css/main.d1caee4f.css",
+    "main.js": "/mathKillah/static/js/main.6660e106.js",
+    "static/media/mult.png": "/mathKillah/static/media/mult.d633c3c0941d792f3eea.png",
+    "static/media/plus.png": "/mathKillah/static/media/plus.80a0d26fd411f3fa433d.png",
+    "static/media/del.png": "/mathKillah/static/media/del.5ffbc8489ac8db1eae31.png",
+    "static/media/modal.mp3": "/mathKillah/static/media/modal.08642bfc4ebd8e0b66a9.mp3",
+    "static/media/win.mp3": "/mathKillah/static/media/win.03ee9f958bea13fcd20b.mp3",
+    "static/media/minus.png": "/mathKillah/static/media/minus.f022a6764b5145403b9e.png",
+    "static/media/start.mp3": "/mathKillah/static/media/start.2e8e17902859c8777012.mp3",
+    "static/media/choose.mp3": "/mathKillah/static/media/choose.5aafe17048c8fe6bf6eb.mp3",
+    "index.html": "/mathKillah/index.html",
+    "main.d1caee4f.css.map": "/mathKillah/static/css/main.d1caee4f.css.map",
+    "main.6660e106.js.map": "/mathKillah/static/js/main.6660e106.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1caee4f.css",
+    "static/js/main.6660e106.js"
+  ]
+}
