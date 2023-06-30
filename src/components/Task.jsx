@@ -15,13 +15,8 @@ export const Task = () => {
     const first = useSelector(state=>state.taskReducer.first)
     const signsArray = useSelector(state=>state.taskReducer.sign)
     const second = useSelector(state=>state.taskReducer.second)
-    console.log(first)
-    console.log(second)
-    console.log(signsArray)
     const [sign,setSign] = useState('')
-    console.log(sign)
     const ansver = useSelector(state=>state.taskReducer.ansver)
-    console.log(ansver)
     const dispatch = useDispatch()
     const [input,setInput] = useState('')
     const score = useSelector(state=>state.taskReducer.score)
@@ -63,7 +58,6 @@ export const Task = () => {
                 secondRandom = Math.floor(Math.random()*100)+2;
             }
     }
-       
     useEffect(()=>{
         if(ansver===Number(input)){
             dispatch(addScoreAction())
@@ -76,14 +70,12 @@ export const Task = () => {
         if(score===0){
             genSign()
             genRand(1,100)
-            
         }
     },[])
     useEffect(()=>{
         genSign()
         genAnsver()
     },[sign,score])
-
   return (
     <div className='taskWrapper'>
         {modal?<Modal/>:null}

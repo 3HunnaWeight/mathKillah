@@ -5,6 +5,7 @@ const defaultState = {
     score:0,
     ansver:null,
     modal:false,
+    timerReset:false
 }
 const GENERATE_FIRST = 'GENERATE_FIRST'
 const GENERATE_SECOND = 'GENERATE_SECOND'
@@ -14,12 +15,16 @@ const PUSH_SIGN  = "PUSH_SIGN"
 const MODAL_SWITCH = 'MODAL_SWITCH'
 const ARRAY_RESET = 'ARRAY_RESET'
 const SCORE_RESET = 'SCORE_RESET'
+const TIMER_RESET = 'TIMER_RESET'
+
 export const taskReducer = (state=defaultState,action) =>{
     switch(action.type){
         case GENERATE_FIRST:
             return {...state, first:state.first=action.payload}
        case MODAL_SWITCH:
-            return {...state, modal:!state.modal}        
+            return {...state, modal:!state.modal}
+        case TIMER_RESET:
+            return {...state, timerReset:!state.timerReset}                         
         case GENERATE_SECOND:
             return {...state, second:state.second=action.payload}
         case ADD_SCORE:
@@ -45,3 +50,4 @@ export const pushSignAction = (payload) => ({type:PUSH_SIGN, payload})
 export const switchModalAction = (payload) => ({type:MODAL_SWITCH,payload})
 export const arrayResetAction = (payload) => ({type:ARRAY_RESET,payload})
 export const scoreResetAction = (payload) => ({type:SCORE_RESET,payload})
+export const timerResetAction = (payload) => ({type:TIMER_RESET,payload})

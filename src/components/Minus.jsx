@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { chooseMinusAction } from '../store/chooseReducer'
-
 export const Minus = () => {
   const ref = useRef()
   let link=require('../audio/choose.mp3');

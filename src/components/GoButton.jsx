@@ -23,7 +23,7 @@ export const CheckBox = () => {
   }
   return (
     <div className="goWrapper">
-      <Link to ='/game' onClick={()=>{play();pushSign()}}>
+      <Link className={plus||minus||mult||division?'choosen':''} to ={plus||minus||mult||division?'/game':'/'} onClick={()=>{play();pushSign()}}>
           GO
       </Link>
     </div>

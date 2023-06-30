@@ -3,6 +3,9 @@
     height: 40%;
     position: absolute;
     top:20%;
+    animation: modalAnimation 0.3s ease;
+    transition: all 0.3 ease;
+    opacity: 1;
 }
 .modal{
     background-blend-mode:multiply;
@@ -25,19 +28,47 @@
     align-items:center;
 }
 .btn{
-width: 20%;
-height: 20%;
-display: flex;
-justify-content: center;
-align-items: center;
-border: 2px solid white;
-border-radius: 20px;
-box-shadow: 7px 10px 10px 3px rgba(10, 0, 0, 0.5);
-transition:  all 0.3s ease;
-font-size: 16px;
-text-align: center;
+    width: 20%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 7px 10px 10px 3px rgba(10, 0, 0, 0.5);
+    transition:  all 0.3s ease;
+    font-size: 16px;
+    text-align: center;
 }
-
 .btn:hover{
     transform: scale(1.2);
+}
+@keyframes modalAnimation {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    25%{
+        opacity: 0.3;
+        transform: translateY(-75%);
+    }
+    50%{
+        opacity: 0.6;
+        transform: translateY(-50%);
+    }
+    75%{
+        opacity: 0.9;
+        transform: translateY(-25%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animation{
+    animation: modalAnimation 0.3s  ease;
+}
+
+.modalWrapper.show {
+    opacity: 0; 
 }

@@ -59,3 +59,6 @@
     outline: none;
     line-height: none;
 }
+.display{
+    opacity: 0;
+}

@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../styles/modal.css"
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import {arrayResetAction, generateFirstAction, generateSecondAction, getAnsverAction, scoreResetAction, switchModalAction } from '../store/taskReducer'
+import { useDispatch, useSelector } from 'react-redux'
+import {arrayResetAction, generateFirstAction, generateSecondAction, getAnsverAction, scoreResetAction, switchModalAction,timerResetAction } from '../store/taskReducer'
 export const Modal = () => {
+    const modal = useSelector(state=>state.taskReducer.modal)
+    const modalAudioLink = require('../audio/modal.mp3')
+    let modalAudio  = new Audio(modalAudioLink)
+    useEffect(()=>{
+        modalAudio.play()
+    },[modal])
+    const buttonClickAudioLink = require('../audio/start.mp3')
+    let ButtonClickAudio  = new Audio(buttonClickAudioLink)
+    const play = () =>{
+        ButtonClickAudio.play()
+    }
     const dispatch = useDispatch()
     const reset = () => {
         dispatch(generateFirstAction(0))
@@ -14,24 +25,21 @@ export const Modal = () => {
         dispatch(arrayResetAction())
     }
     const tryAgain = () => {
-        dispatch(getAnsverAction(null))
+        dispatch(timerResetAction())
         dispatch(scoreResetAction())
         dispatch(switchModalAction())
+        setTimeout(() => {
+           dispatch(timerResetAction()) 
+        });
     }
-    /*first:0,
-    sign:[],
-    second:0,
-    score:0,
-    ansver:null,
-    modal:false,*/ 
   return (
-    <div className='modalWrapper'>
+    <div className={`modalWrapper`}>
         <div className='modal'>
             <div className="buttonsWrapper">
-                <div className="btn" onClick={()=>{tryAgain()}}>
+                <div className='btn'  onClick={()=>{tryAgain();play();}}>
                     Try again   
                 </div>
-                <Link to ='/' className='btn' onClick={()=>reset()} >
+                <Link to ='/' className='btn' onClick={()=>{reset();play()}} >
                         Choose other signs 
                 </Link>
             </div>
